@@ -1,9 +1,10 @@
 <?php 
 $peso = $_GET['Peso'];
 $alt = $_GET['Altu'];
-str_replace(",",".",$alt);
-str_replace(",",".",$peso);
+$alt = str_replace(",",".",$alt);
+$peso = str_replace(",",".",$peso);
 $IMC= $peso/($alt*$alt);
+$IMC = round($IMC, 2);
 echo "<center><h1>Seu IMC foi de: $IMC portanto você foi classicado como...</h1>";
 if($IMC < 18.5)
 {

@@ -1,9 +1,10 @@
 <?php 
 $Temp = $_GET['temper'];
+$Temp = str_replace(",",".",$Temp);
 echo "<center>";
 if($Temp>= 25)
 {
-    echo "A Temperatura registrada($Temp °) pode ser considerada Quente <br><br>";
+    echo "A Temperatura registrada ($Temp) pode ser considerada Quente <br><br>";
     echo "De acordo com esta tabela<br>";
     echo "<style>#f1{background-color: red;}</style>";
 }
@@ -34,11 +35,11 @@ echo "
         <td>Quente</td>
     </tr>
     <tr id='f2'>
-        <td>Igual ou menor que 25° e maior que 15°</td>
+        <td>Menor que 25° e igual ou maior que 15°</td>
         <td>Razoável</td>
     </tr>
     <tr id='f3'>
-        <td>Igual ou menor que 15° e maior que 0°</td>
+        <td>Menor que 15° e igual ou maior que 0°</td>
         <td>Frio</td>
     </tr>
     <tr id='f4'>

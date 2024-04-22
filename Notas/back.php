@@ -2,6 +2,9 @@
 $Nota_1 = $_GET['nota1'];
 $Nota_2 = $_GET['nota2'];
 $Nota_3 = $_GET['nota3'];
+$Nota_1 = str_replace(",",".",$Nota_1);
+$Nota_2 = str_replace(",",".",$Nota_2);
+$Nota_3 = str_replace(",",".",$Nota_3);
 $Media = ($Nota_1+$Nota_2+$Nota_3)/3;
 $Media = round($Media, 2);
 echo "<center><h1>$Nome foi: </h1> <br>";
